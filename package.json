@@ -13,12 +13,27 @@
     "@storybook/react": "^5.2.6",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 3000",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prettier": "prettier --write --config .prettierrc '**/*.jsx' '**/*.scss'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.jsx,*.scss": [
+      "prettier --write --config .prettierrc",
+      "git add"
+    ]
   }
 }
