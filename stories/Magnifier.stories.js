@@ -8,7 +8,7 @@ export default {
 
 export const basic = () => (
   <Magnifier>
-    <div>
+    <div style={{ background: '#efefef'}}>
       예시입니다. 예시입니다.<br />
       예시입니다. 예시입니다.<br />
       예시입니다. 예시입니다.<br />
