@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './CutView.scss';
 const useMousePoistion = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const handler= e => {
+  const handler = e => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
