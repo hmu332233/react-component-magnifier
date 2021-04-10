@@ -2,38 +2,31 @@
   "name": "react-component-magnifier",
   "version": "0.0.1",
   "main": "index.js",
-  "author": "minung.han",
+  "repository": "https://github.com/hmu332233/react-component-magnifier.git",
+  "author": "minung.han <hmu332233@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "husky": "^3.1.0",
-    "lint-staged": "^9.5.0",
-    "node-sass": "^4.13.0",
-    "prettier": "^1.19.1",
-    "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0"
+    "@babel/core": "^7.13.15",
+    "@storybook/addon-actions": "^6.2.7",
+    "@storybook/addon-essentials": "^6.2.7",
+    "@storybook/addon-links": "^6.2.7",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.2.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "scripts": {
-    "storybook": "start-storybook -p 3000",
-    "build-storybook": "build-storybook",
-    "prettier": "prettier --write --config .prettierrc '**/*.jsx' '**/*.scss'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.jsx,*.scss": [
-      "prettier --write --config .prettierrc",
-      "git add"
-    ]
+    "storybook": "start-storybook -p 3000 --ci",
+    "build-storybook": "build-storybook"
   }
 }
